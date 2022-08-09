@@ -18,12 +18,11 @@ const infomationSchema = new mongoose.Schema({
 
 const UserSchema = new Schema(
   {
-    _id: { type: String, require: true }, // String is shorthand for {type: String}
     username: { type: String, require: true },
     password: { type: String, require: true },
     address: addressSchema,
     infomation: infomationSchema,
-    role: { type: Schema.Types.ObjectId, ref: "Role" },
+    roleid: { type: Schema.Types.ObjectId, ref: "Role" },
   },
   { timestamps: true }
 );
